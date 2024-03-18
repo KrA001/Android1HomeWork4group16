@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android1HomeWork4(group16)</string>
+    <string name="youtube">youtube</string>
+    <string name="fag_go_content_description">кнопка для перехода во втрой окно</string>
+    <string name="google">google</string>
+    <string name="et_input_content_description">После ввода для текста</string>
+    <string name="zagolovoc">Поиск по Телофону номера и по ссылке:</string>
+    <string name="whatsapp">whatsapp</string>
+</resources>
