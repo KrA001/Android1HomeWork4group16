@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var etInput: EditText
     private lateinit var cardGoogle: MaterialCardView
     private lateinit var cardYoutube: MaterialCardView
-    protected lateinit var btnWhatsapp: MaterialButton
+    private lateinit var cardWhatsapp: MaterialCardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,24 +28,14 @@ class MainActivity : AppCompatActivity() {
         etInput = this.findViewById(R.id.et_input)
         cardGoogle = this.findViewById(R.id.card_google)
         cardYoutube = this.findViewById(R.id.card_youtube)
-        btnWhatsapp = this.findViewById(R.id.btn_whats_app)
+        cardWhatsapp = this.findViewById(R.id.card_whatsapp)
 
         goToSecondActivity()
+
         goToLink(cardGoogle,"https://www.google.com/search?q=")
         goToLink(cardYoutube,"https://www.youtube.com/results?search_query=")
-
-        goToWhatsapp()
+        goToLink(cardWhatsapp,"https://wa.me/")
     }
-
-    private fun goToWhatsapp() {
-        btnWhatsapp.setOnClickListener{
-            val whatsappSearchUrs = "https://wa.me/"
-            val number = etInput.text.toString().trim()
-            val whatsappIntent = Intent(Intent.ACTION_VIEW, Uri.parse("$whatsappSearchUrs$number"))
-            startActivity(whatsappIntent)
-        }
-    }
-
     private fun goToSecondActivity() {
         fabGo.setOnClickListener{
             val text = etInput.text.toString().trim()

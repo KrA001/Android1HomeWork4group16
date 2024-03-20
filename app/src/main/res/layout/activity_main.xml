@@ -18,17 +18,26 @@
         android:contentDescription="@string/et_input_content_description"
         android:hint="@string/zagolovoc" />
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_whats_app"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_whatsapp"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:backgroundTint="@color/green"
-        android:text="@string/whatsapp"
-        android:textSize="26sp"
-        app:cardCornerRadius="26dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/green"
         app:strokeColor="@color/black"
-        app:strokeWidth="3dp" />
+        app:strokeWidth="2dp">
+    <TextView
+        android:id="@+id/tv_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="10dp"
+        android:text="@string/whatsapp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_google"
