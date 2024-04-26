@@ -27,7 +27,7 @@
         app:strokeColor="@color/black"
         app:strokeWidth="2dp">
     <TextView
-        android:id="@+id/tv_"
+        android:id="@+id/tv_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

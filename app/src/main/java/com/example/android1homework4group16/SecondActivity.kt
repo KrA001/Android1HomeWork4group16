@@ -11,7 +11,7 @@ class SecondActivity : AppCompatActivity() {
     private lateinit var tvText: TextView
     private lateinit var ivGallery: ImageView
 
-    private val counter = registerForActivityResult(ActivityResultContracts.GetContent()) {
+    private val fuGallery = registerForActivityResult(ActivityResultContracts.GetContent()) {
         ivGallery.setImageURI(it)
     }
 
@@ -26,16 +26,16 @@ class SecondActivity : AppCompatActivity() {
         chooseImageFromGallery()
     }
 
-    private fun chooseImageFromGallery() {
-        ivGallery.setOnClickListener {
-            counter.launch("image/*")
-        }
-    }
-
     private fun acceptText() {
         val text = intent.getStringExtra(MainActivity.TEXT_KEY)
         if (text != null) {
             tvText.text = text
+        }
+    }
+
+    private fun chooseImageFromGallery() {
+        ivGallery.setOnClickListener {
+            fuGallery.launch("image/*")
         }
     }
 }
